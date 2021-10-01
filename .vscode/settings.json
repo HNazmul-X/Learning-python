@@ -1,0 +1,23 @@
+{
+    "python.testing.pytestArgs": [
+        "__pycache__"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./__pycache__",
+        "-p",
+        "*test.py"
+    ],
+    "python.testing.nosetestArgs": [
+        "."
+    ],
+    "jupyter.jupyterServerType": "local",
+    "cSpell.words": [
+        "ABCDEFGHIJKLM",
+        "sumoflist"
+    ]
+}
