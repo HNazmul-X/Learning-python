@@ -1,15 +1,34 @@
-let myStr = "ABCDEFGHIJKLM";
-[...myStr].forEach((item) => console.log(item));
-console.log("hello world");
-console.log([...myStr]);
+const fibonacci = (n) => {
+    if (n===1){
+        return 4
+    } else if( n==2){
+        return 3
+    } else {
+        return fibonacci(n-1)+fibonacci(n-2) 
+    }
+}
+
+console.log(fibonacci(9))
 
 
-const string = "12345";
-const forbidden = "-";
-myStr = [...string].filter((c) => !forbidden.includes(c)).map((c) => parseInt(c));
-console.log(myStr);
 
-myStr = [...string].map(c => c)
-console.log(myStr)
+//                                                                                                     fibonacci(9-1)+fibonacci(9-2)
 
-console.log(myStr.length>2?true:false)
+
+
+
+//                                                                                   fibonacci(8-1)+fibonacci(8-2)  + fibonacci(7-1)+fibonacci(7-2)
+
+
+
+
+
+
+//                                                            fibonacci(7-1)+fibonacci(7-2)  + fibonacci(6-1)+fibonacci(6-2) + fibonacci(6-1)+fibonacci(6-2)  + fibonacci(5-1)+fibonacci(5-2)
+
+
+
+
+
+
+// fibonacci(6-1)+fibonacci(6-2)  + fibonacci(5-1)+fibonacci(5-2) + fibonacci(4-1)+fibonacci(5-2)  + fibonacci(4-1)+fibonacci(4-2) fibonacci(5-1)+fibonacci(5-2)  + fibonacci(6-1)+fibonacci(6-2) + fibonacci(6-1)+fibonacci(6-2)  + fibonacci(5-1)+fibonacci(5-2)
