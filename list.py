@@ -1,36 +1,31 @@
-# my_list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+class Stack():
+    def __init__(self):
+        self.stack = []
+        self.size = 0
 
-# print(*my_list)
+    def push(self, x):
+        self.size = self.size + 1
+        return self.stack.append(x)
 
-# removedElement = my_list.pop()
-# print(removedElement)
-# print(my_list)
+    def pop(self):
+        if self.size > 0:
+            self.size = self.size - 1
+            return self.stack.pop()
+        else:
+            return "self Already Empty"
 
-# myTuple = ("nazmul","Sabina","Mim","yasin","Tabaccum","rakib")
-# myTuple = list(myTuple)
-# myTuple.remove(myTuple[-1])
-# myTuple = tuple(myTuple)
-# print(myTuple)
-
-myDictionary = {
-    "Nazmul": "Sabina",
-    "Sabina": "Nazmul",
-    "Rakib": "Sabina",
-    "IsSabinaLoveRakib": True,
-    "isAnybodyLoveSabinaWithOutRakib": False,
-    "ReletionLength": 2
-}
-# myDictionary2 = {
-#     "family": True,
-#     "mother": "Jesmin akter",
-#     "Father": "Md. Abdus Samad"
-# }
+    def top(self):
+        return self.stack[-1]
 
 
-# dictWithFamily = {**myDictionary, **myDictionary2}
-thirdDictonary = {myDictionary}
-print(thirdDictonary)
+x = Stack()
+x.push(5)
+x.push(3)
+x.push(1)
+print(x.stack)
+print(x.size)
 
-# values = dictWithFamily.values()
-# for data in values:
-#     print(data)
+x.pop()
+
+
+
